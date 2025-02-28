@@ -1,6 +1,6 @@
 const initLiff = async () => {
     try {
-        await liff.init({ liffId: '2006898896-KvlkD1WM' });
+        await liff.init({ liffId: '2006981835-7GgjW3jm' });
         if (!liff.isLoggedIn()) {
             liff.login();
         }
