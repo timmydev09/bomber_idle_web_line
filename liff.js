@@ -5,6 +5,7 @@ const initLiff = async () => {
             liff.login();
         }
         console.log(liff.getIdToken())
+        document.getElementById("user-id").innerHTML(liff.getIdToken())
     } catch (err) {
         console.error(err)
     }
