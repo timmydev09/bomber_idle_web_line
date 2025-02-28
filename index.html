@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/versions/2.22.3/sdk.js"></script>
     <script src="liff.js"></script>
     <title>Document</title>
 </head>
@@ -13,6 +13,17 @@
     <h1>HELLO WORLD</h1>
 
     <h1 id="user-id"></h1>
+    <script src="liff.js"></script>
+    <script>
+        const initLiff = async () => {
+            await liff.init({ liffId: '2006981835-7GgjW3jm' })
+            if (!liff.isLoggedIn()) {
+                await liff.login();
+            }
+            console.log(liff.getIdToken())
+        }
+        initLiff()
+    </script>
 </body>
 
 </html>
